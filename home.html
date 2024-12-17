@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmify - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Farmify</h1>
+    </header>
+    <main>
+        <div class="grid-container">
+            <div class="grid-item" style="background-image: url('https://www.shutterstock.com/image-photo/farmer-standing-wheat-field-using-600nw-1436633354.jpg');" onclick="navigateTo('connect_farmer.html')">
+                <div class="overlay">
+                    <h2>Connect to Farmer</h2>
+                </div>
+            </div>
+            <div class="grid-item" style="background-image: url('https://storwukenticomedia.blob.core.windows.net/media/wfu/media/images/5-ways-to-support-your-crop-at-v5_870x580.jpg?');" onclick="navigateTo('right_crop.html')">
+                <div class="overlay">
+                    <h2>Know Your Right Crop</h2>
+                </div>
+            </div>
+            <div class="grid-item" style="background-image: url('https://img.freepik.com/free-photo/refreshment-from-as-sprinklers-arc-water-geometric-greenery-fields_91128-4673.jpg');" onclick="navigateTo('irrigation.html')">
+                <div class="overlay">
+                    <h2>Irrigation Facilities</h2>
+                </div>
+            </div>
+            <div class="grid-item" style="background-image: url('https://eos.com/wp-content/uploads/2023/11/components-of-different-types-of-fertilizers.jpg.webp');" onclick="navigateTo('fertilizer.html')">
+                <div class="overlay">
+                    <h2>Fertilizer Requirements</h2>
+                </div>
+            </div>
+            <div class="grid-item" style="background-image: url('https://www.cultivation.hps.cam.ac.uk/sites/default/files/styles/leading/public/aboutbanner.png?itok=hJ6JU94p');" onclick="navigateTo('cultivation.html')">
+                <div class="overlay">
+                    <h2>Cultivation Seasons</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
