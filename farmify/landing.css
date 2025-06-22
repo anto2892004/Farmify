@@ -1,0 +1,125 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #033416;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #033416;
+  font-weight: 500;
+  border: 2px solid transparent;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  border-color:#033416;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Blurred Background Image Layer */
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('https://www.shutterstock.com/image-photo/lush-rice-paddy-field-neat-600nw-2499404003.jpg') no-repeat center center/cover;
+  filter: blur(6px);
+  z-index: 1;
+}
+
+/* Content Layer (on top of blur) */
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  color: #14532d;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  animation: slideIn 1.5s ease;
+}
+
+.btn {
+  padding: 12px 28px;
+  background-color: #14532d;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: 0.3s;
+  animation: fadeIn 2s ease;
+}
+
+.btn:hover {
+  background-color: #0e3f1e;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

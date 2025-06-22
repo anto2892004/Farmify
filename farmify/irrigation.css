@@ -1,0 +1,212 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.irrigation-header {
+    position: relative;
+    height: 270px; /* Adjust the height of the rectangle */
+    display: flex;
+    align-items: flex-end; /* Align content to the bottom */
+    justify-content: flex-start; /* Align content to the left */
+    overflow: hidden;
+    color: white;
+    padding: 20px; /* Add padding for spacing from the edges */
+    text-align: left;
+}
+
+/* Background Image */
+.irrigation-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.ugaoo.com/cdn/shop/articles/shutterstock_562184122.jpg?v=1661876335);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.8; /* Slight transparency for better effect */
+}
+
+/* Text on Top */
+.irrigation-header h1 {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the background */
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    margin: 20px;
+}
+
+.services p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Features Grid */
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    gap: 10px;
+}
+
+.features-grid .grid-item {
+    position: relative;
+    color: white;
+    text-align: left; /* Align text to the left */
+    padding: 10px;
+    border-radius: 8px;
+    width: 30%;
+    height: 100px; /* Set height for the grid items */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    font-weight: bold; /* Make the text bolder */
+}
+
+.features-grid .grid-item .grid-item-text {
+    position: absolute;
+    bottom: 10px; /* Position at the bottom */
+    left: 10px; /* Align to the left */
+    font-weight: bolder; /* Make the text bolder */
+    font-size: 17px; /* Adjust font size if needed */
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Add text shadow for better contrast */
+}
+
+.features-grid .grid-item:nth-child(1) {
+    background-image: url('https://zaavio.com/cdn/shop/products/automatic-irrigation-system-outdoor-plant-watering-sprinkler-ezymist-ezymist-zaavio-30232761467050.jpg?v=1655805115&width=2200');
+}
+
+.features-grid .grid-item:nth-child(2) {
+    background-image: url('https://agricultureguruji.com/wp-content/uploads/2020/10/Methods-of-Irrigation-768x512.jpg.webp');
+}
+
+.features-grid .grid-item:nth-child(3) {
+    background-image: url('https://www.qfc.qa/-/media/project/qfc/qfcwebsite/images/news-1150x400px/growth-1150-x-400.jpg?cx=0.5&amp;cy=0.5&amp;cw=1176&amp;ch=409&amp;hash=6894FB8FB73AEE6ED96A41F976F0E72E');
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    margin-left: 10px;
+    background-color: white; /* Explicitly set background to white */
+    color: #333; /* Text color */
+    border-radius: 4px; /* Optional: rounded corners */
+}
+
+/* Focus state */
+.search-container input:focus {
+    border: 2px solid #39405C; /* Set border color when focused */
+    background-color: #f0f0f0; /* Optional: change background on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add box shadow on focus */
+}
+
+/* Crop Info Section */
+.crop-info {
+    margin: 20px;
+}
+
+.crop-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.crop-box:nth-child(1) {
+    background-color: #86D293; /* Green background for cotton */
+}
+
+.crop-box:nth-child(2) {
+    background-color: #E0FBE2; /* White background for coconut */
+}
+
+.crop-box:nth-child(3) {
+    background-color: #86D293; /* Green background for sugarcane */
+}
+
+/* Crop Info Text */
+.crop-box .crop-text h3 {
+    margin: 0;
+}
+
+.crop-box .crop-text p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Crop Info Image */
+.crop-image {
+    width: 60px; /* Adjusted image size */
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover; /* Ensure the image is fully visible */
+    margin-left: 10px; /* Space between text and image */
+}
+
+/* Crop Boxes Background Images */
+.crop-box:nth-child(1) .crop-image {
+    background-image: url('https://t4.ftcdn.net/jpg/06/84/31/79/360_F_684317966_Pn9qU1DEfW5zpwoj25znJ1i0VdaOM2Px.jpg');
+    background-size: contain; /* Ensure full image is visible */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.crop-box:nth-child(2) .crop-image {
+    background-image: url('https://cdn.expeditions.com/globalassets/expedition-stories/coconut-palm/mfp_0618_021.jpg');
+    background-size: contain; /* Ensure full image is visible */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.crop-box:nth-child(3) .crop-image {
+    background-image: url('https://thumbs.dreamstime.com/b/sugar-cane-plant-21119825.jpg');
+    background-size: contain; /* Ensure full image is visible */
+    background-position: center;
+    background-repeat: no-repeat;
+}

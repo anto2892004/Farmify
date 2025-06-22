@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmify - Register</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <img src="https://iffconanos3images.s3.ap-south-1.amazonaws.com/public/admin/news/JzMvjpPnRTkaAdxoXam8SlDUjbceVPWkQEbt5Bcm.jpg" alt="Farmify Image" />
+      <div class="info">
+        <h1>Farmify</h1>
+        <p>Cultivate. Grow. Thrive.</p>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <h2><span>Farmify</span></h2>
+
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="firstName" required />
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lastName" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit" class="login-btn">Register</button>
+        <p id="register-message" style="margin-top: 10px;"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const message = document.getElementById("register-message");
+
+      try {
+        const response = await fetch("connect1.php", {
+          method: "POST",
+          body: formData
+        });
+        const text = await response.text();
+
+        if (text.trim() === "success") {
+          message.textContent = "Registration Successful!";
+          message.style.color = "#4caf50";
+          setTimeout(() => {
+            window.location.href = "home.html";
+          }, 1500);
+        } else {
+          message.textContent = text;
+          message.style.color = "#f44336";
+        }
+      } catch (error) {
+        message.textContent = "Server error. Please try again.";
+        message.style.color = "#f44336";
+      }
+    });
+  </script>
+</body>
+</html>

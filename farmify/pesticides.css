@@ -1,0 +1,168 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.pesticides-header {
+    position: relative;
+    height: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: hidden;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Background Image */
+.pesticides-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://t3.ftcdn.net/jpg/08/05/32/98/360_F_805329832_RUh3EKe8UDqW3X1LROLAgSFwgbq7TXVh.jpg); /* Replace with your own header image */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    
+}
+
+/* Text on Top */
+.pesticides-header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    margin: 20px;
+}
+
+.services p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Features Grid */
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    gap: 10px;
+}
+
+.features-grid .grid-item {
+    position: relative;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    border-radius: 8px;
+    width: 30%;
+    height: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    font-weight: bold;
+}
+
+/* Insecticides Background Image */
+.features-grid .insecticides {
+    background-image: url('https://cs-assets.bayer.com/is/image/bayer/Crop-protection-Insecticides');
+}
+
+/* Herbicides Background Image */
+.features-grid .herbicides {
+    background-image: url('https://cactilandscape.com/wp-content/uploads/2024/03/Dandelion-weed-in-lawn-spraying-weed-killer-herbicide-scaled.jpeg');
+}
+
+/* Fungicides Background Image */
+.features-grid .fungicides {
+    background-image: url('https://extension.umn.edu/sites/extension.umn.edu/files/marssonia-leaf-spot-on-euonymus-grabowski.jpg');
+}
+
+/* Text positioning in grid item */
+.features-grid .grid-item p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Pesticide Info Section */
+.pesticide-info {
+    margin: 20px;
+}
+
+.pesticide-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #E0FBE2; /* Light green background for each pesticide box */
+}
+
+.pesticide-text {
+    max-width: 60%;
+}
+
+.pesticide-box h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.pesticide-box p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.pesticide-image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pesticide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Crop-Specific Background Colors */
+.pesticide-box:nth-child(1) {
+    background-color: #86D293; /* Light green background for cotton */
+}
+
+.pesticide-box:nth-child(2) {
+    background-color: #E0FBE2; /* Light green background for coconut */
+}
+
+.pesticide-box:nth-child(3) {
+    background-color: #86D293; /* Light green background for sugarcane */
+}

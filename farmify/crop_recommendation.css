@@ -1,0 +1,60 @@
+body {
+    background-color: #f0f8f5;
+    font-family: 'Arial', sans-serif;
+    padding-top: 20px;
+}
+
+h2 {
+    color: #3d5a80;
+    font-family: 'Georgia', serif;
+    margin-bottom: 30px;
+}
+
+.field-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the entire image fits inside the card */
+    max-height: 150px; /* Limits height while keeping aspect ratio */
+}
+
+.card-body {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #3d5a80;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #3d5a80;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2f4a65;
+}

@@ -1,0 +1,213 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4; /* Light mode background */
+  color: #333; /* Light mode text color */
+  line-height: 1.6;
+}
+
+/* Dark Mode Body Styling */
+body.dark {
+  background-color: #121212; /* Dark mode background */
+  color: #e0e0e0; /* Dark mode text color */
+}
+
+/* Top Section */
+.top-section {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+body.dark .top-section {
+  background: #333; /* Dark background for the top section */
+  color: #fff; /* Light text color for the top section */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar li {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  cursor: pointer;
+}
+
+.login-btn {
+  background: #008000;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.dark .login-btn {
+  background: #333; /* Dark mode button */
+  color: #fff; /* Light text color for the button */
+}
+
+/* Hero Text */
+.hero-text {
+  margin-top: 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-text h1 span {
+  color: #008000;
+}
+
+.hero-text p {
+  margin-top: 15px;
+  color: #555;
+}
+
+/* Dark Mode Hero Text */
+body.dark .hero-text h1 {
+  color: #e0e0e0; /* Light color for heading in dark mode */
+}
+
+body.dark .hero-text p {
+  color: #ccc; /* Light color for paragraph in dark mode */
+}
+
+/* Middle Section */
+.middle-section {
+  padding: 40px 20px;
+}
+
+.hex-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.hex-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+/* Alternate Left and Right Layout */
+.hex-row.left {
+  justify-content: flex-start;
+}
+
+.hex-row.right {
+  justify-content: flex-end;
+}
+
+/* Hexagon Box */
+.hex-box {
+  width: 200px;
+  height: 230px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #ddd;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+body.dark .hex-box {
+  background-color: #555; /* Dark background for hex boxes */
+}
+
+/* Rectangular Container */
+.rect-container {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .rect-container {
+  background-color: #333; /* Dark mode background for container */
+  color: #e0e0e0; /* Light text color for container */
+}
+
+/* Alternating Colors */
+.hex-row.left .rect-container {
+  background-color: #86D293;
+}
+
+.hex-row.right .rect-container {
+  background-color: #E0FBE2;
+}
+
+body.dark .hex-row.left .rect-container {
+  background-color: #4e7f51; /* Darker green for left rect-container in dark mode */
+}
+
+body.dark .hex-row.right .rect-container {
+  background-color: #4a5b6f; /* Darker blue for right rect-container in dark mode */
+}
+
+/* Button Styling */
+.shop-now {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #63906b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.shop-now:hover {
+  background: #86D293;
+}
+
+/* Dark Mode Shop Now Button */
+body.dark .shop-now {
+  background: #444;
+}
+
+body.dark .shop-now:hover {
+  background: #5b6b45; /* Dark mode hover effect */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .hex-box {
+    width: 150px;
+    height: 180px;
+  }
+
+  .line-text {
+    font-size: 0.9rem;
+  }
+
+  .rect-container {
+    padding: 15px;
+  }
+}
